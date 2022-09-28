@@ -1,7 +1,7 @@
 # Instrument
 
 # Screenshot
-![Screenshot] (/screenshot/screenshot-large.jpg)
+![Screenshot](/screenshot/screenshot-large.jpg)
 
 # Source
 [Front-end-Practice](https://www.frontendpractice.com/projects/instrument)
