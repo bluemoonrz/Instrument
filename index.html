@@ -7,32 +7,47 @@
 
     <!-- <author> BlueMoon </author> -->
 
+    <!-- main title -->
     <title>Instrument</title>
+
+    <!-- stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- javascript -->
     <script src="main.js" defer></script>
 
 
 </head>
 <body>
     
+    <!-- navigation menu (nav-bar) -->
     <nav>
-        <h2>INSTRUMENT</h2>
-        <ul class="nav--bar">
+
+        <!-- brand name -->
+        <h2 id="branding">
+            INSTRUMENT
+        </h2>
+
+        <!-- menu navigation -->
+        <ul class="nav--bar" aria-expanded="false">
             <li><a href="#">WHAT WE DO</a></li>
             <li><a href="#">WHO WE ARE</a></li>
             <li><a href="#">BEING HERE</a></li>
             <li><a href="#">CAREERS</a></li></ul>
-        <div class="hamburger active">
-        <div class="hamburger--bar"></div>
-        <div class="hamburger--bar"></div>
-        <div class="hamburger--bar"></div></div>
+
+        <!-- hamburger menu -->
+        <div class="hamburger" data-visible="false">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
 
     <div class="introduction">
         <h1>Imagine. Explore. Recreate.</h1>
-        <p>Tried to copy this website
+        <p>A clone of the original website
         <a target="_blank" href="https://www.instrument.com/"> Instrument</a>.</p>
-        <p>The hamburger-menu has animations but doesnt work</p>
+        <p>Now the hamburger menu has animations and works</p>
         <button>Learn more -></button>
 
         <div class="intro--photo"><img src="images/photographer.jpg"></div>

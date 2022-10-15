@@ -2,13 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
-* {padding: 0; margin: 0; box-sizing: border-box;}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
-body {
     background-color: black;
     color: white;
 }
 
+
+/* nav-bar (container) */
 nav {
     display: flex;
     justify-content: space-between;
@@ -17,23 +21,81 @@ nav {
 
     font-family: 'Share Tech Mono';
 }
-nav > h2:hover {
+#branding {
     cursor: default;
 }
+
+/* navigation menu */
 .nav--bar {
     display: flex;
     gap: 5rem;
 
     list-style: none;
 }
+
+/* NAVIGATION MENU anchor list styling */
 .nav--bar > li > a {
     text-decoration: none;
     color: white;
     font-family: 'Share Tech Mono';
 }
+/* NAVIGATION MENU anchor list hover-states */
 .nav--bar > li > a:hover {
     text-decoration: underline;
 }
+
+/* navbar when hamburger-menu open */
+.nav--bar[aria-expanded=true] {
+    display: flex;
+    flex-direction: column;
+
+    padding: 25rem 0 5rem 2.5rem;
+
+    position: fixed;
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+
+
+/* hamburger menu */
+.hamburger {
+    aspect-ratio: 1;
+
+    display: grid;
+    gap: 0.3rem;
+}
+
+/* hamburger menu bars */
+.bar {
+    background-color: white;
+
+    height: 2px;
+    width: 20px;
+
+    transition: 250ms;
+    transform-origin: left;
+}
+
+/* hamburger active-states (data-visible) value */
+.hamburger[data-visible=true] .bar:first-child {
+    rotate: 49deg;
+}
+.hamburger[data-visible=true] .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger[data-visible=true] .bar:last-child {
+    rotate: -49deg;
+}
+
+
+
+/* MEDIA QUERIES */
+
 @media (max-width: 1024px) {
     .nav--bar {
         gap: 3rem;
@@ -42,37 +104,71 @@ nav > h2:hover {
         margin: 1rem 2rem;
     }
 }
+
 @media (max-width: 768px) {
     .nav--bar {
         display: none;
     }
 }
+
+/* hamburger-display (none) */
 @media (min-width: 768px) {
     .hamburger {
         display: none;
     }
 }
-.hamburger--bar {
-    background-color: white;
 
-    height: 2px;
-    width: 20px;
-    margin-top: 0.3rem;
-    margin-bottom: 0.5rem;
 
-    transition: 0.3s;
-}
-.hamburger.active .hamburger--bar:nth-child(1) {
-    rotate: 90deg;
-    transform-origin: left;
-}
-.hamburger.active .hamburger--bar:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.active .hamburger--bar:nth-child(3) {
-    rotate: 90deg;
-    transform-origin: right;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* intro-- */
 .introduction {
