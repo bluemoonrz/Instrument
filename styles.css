@@ -273,6 +273,14 @@ button:hover {
     .footer > h3 {
         font-size: 1.8rem;
     }
+
+    /* for changing the view of main-content (reversed-layout) */
+    .content-box:nth-child(2) {
+        display: grid;
+    }
+    .content-box:nth-child(2) > section:last-child {
+        grid-row: 1;
+    }
 }
 @media (min-width: 768px) {
     .intro--phase3 {
@@ -332,6 +340,7 @@ button:hover {
 }
 
 footer {
+
     display: grid;
     place-items: center;
 
@@ -340,6 +349,5 @@ footer {
     text-align: center;
 
     font-family: 'Fira Code';
-
     margin-bottom: 10rem;
 }
