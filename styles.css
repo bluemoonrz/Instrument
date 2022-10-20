@@ -1,6 +1,14 @@
+/* Share Tech Mono (for headings) */
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+/* Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+/* Roboto (basic typo) */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+/* Fira Code (for ligatures only {buttons}) */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 * {
     padding: 0;
@@ -10,6 +18,13 @@
     background-color: black;
     color: white;
 }
+
+::selection {
+    background-color: white;
+    color: black;
+}
+
+
 
 
 /* nav-bar (container) */
@@ -44,7 +59,7 @@ nav {
     text-decoration: underline;
 }
 
-/* navbar when hamburger-menu open */
+/* navbar when hamburger-menu opens */
 .nav--bar[aria-expanded=true] {
     display: flex;
     flex-direction: column;
@@ -105,9 +120,16 @@ nav {
     }
 }
 
+/* navigation menu-display (none) */
 @media (max-width: 768px) {
     .nav--bar {
         display: none;
+    }
+
+    .hero-section {
+        width: 85%;
+        margin: auto;
+        font-size: 2.5rem;
     }
 }
 
@@ -116,101 +138,66 @@ nav {
     .hamburger {
         display: none;
     }
+
+    .hero-section {
+        width: 50%;
+        margin: auto;
+        font-size: 3rem;
+    }
+    .hero {
+        margin: 10rem 4rem;
+    }
+
+    .content-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .content-box-text {
+        width: 55%;
+        margin: auto;
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        margin: 10rem 1.5rem;
+    }
+    
+    .content-box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .content-box-text {
+        width: 85%;
+        margin: auto;
+        margin-top: 2.5rem;
+        text-align: center;
+        font-size: 1rem;
+    }
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* intro-- */
-.introduction {
-    margin: 10rem 4rem;
-}
-.introduction > h1 {
+/* INTRODUCTION (text) */
+.hero > h1 {
     font-family: 'Open Sans';
     font-size: 3.5rem;
     margin-bottom: 3rem;
 }
-.introduction > p {
-    font-family: 'Roboto';
-    font-weight: 300;
+.hero > p {
+    font-family: 'Open Sans';
     line-height: 1.5rem;
 }
-.introduction > p > a {
+.hero > p > a {
     color: white;
     font-weight: bold;
     transition: 0.3s;
 }
 
-/* learn--more universal button */
-button {
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-
-    border: none;
-    outline: none;
-    background-color: white;
-    border-radius: 5rem;
-
-    font-family: Victor Mono;
-    font-size: 0.7rem;
-
-    transition: 0.3s;
-}
-button:hover {
-    background-color: gray;
-    cursor: pointer;
-}
-
-.intro--photo > img {
+/* INTRODUCTION (image) */
+.hero-image > img {
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -218,57 +205,102 @@ button:hover {
     margin: 5rem 0;
 }
 
-
-
-.intro--phase2 {
+.hero-section {
     font-family: 'Roboto';
-    font-size: 3rem;
 
-    width: 45%;
     margin: auto;
     text-align: center;
 }
+
+/* Main Content Box */
+.main-content {
+    margin: 0 3.5rem;
+}
+
+.content-box-image img {
+    width: 100%;
+}
+.content-box-text p {
+    font-family: 'roboto';
+}
+
+.content-box {
+    margin: 7.5rem 0;
+}
+
+
+
+/* general-use button */
+button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    border-radius: 5rem;
+
+    font-family: "Fira Code";
+    font-size: 0.7rem;
+
+    transition: 0.3s;
+}
+button:hover {
+    background-color: black;
+    color: white;
+    outline: 1px solid white;
+    cursor: pointer;
+}
+
+
+/* same media on diff line for management */
+@media (max-width: 768px) {
+    .intro--phase3 {
+        font-size: 1.5rem;
+        width: 75%;
+    }
+
+    .intro--last {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .links {
+        margin: 15rem 2.5rem;
+    }
+
+    .footer > h3 {
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 768px) {
+    .intro--phase3 {
+        font-size: 3rem;
+        width: 45%;
+    }
+
+    .intro--last {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .links {
+        margin: 15rem 10rem;
+    }
+}
+
 .intro--phase3 {
+    margin-top: 5rem;
     font-family: 'Roboto';
-    font-size: 3rem;
-
-    width: 45%;
     margin: auto;
     text-align: center;
-}
-
-
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10rem 0;
-
-    justify-content: center;
-    align-items: center;
-
-    padding: 0 5rem;
-    gap: 3rem;
-}
-.content--image img {
-    max-width: 100%;
-    height: auto;
-}
-.content--text {
-    font-size: 1.15rem;
-    font-family: 'Roboto';
-
-    width: 50%;
-    margin: auto;
-    line-height: 1.5;
 }
 
 .intro--last {
     margin-top: 5rem;
     padding: 0 3rem;
     gap: 3rem;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 .intro--last img {
     max-width: 100%;
@@ -281,7 +313,7 @@ button:hover {
     font-family: 'Roboto';
 }
 .intro--last p {
-    font-family: 'Space Mono';
+    font-family: 'Roboto';
     font-size: 0.85rem;
 }
 
@@ -290,22 +322,24 @@ button:hover {
     display: grid;
     grid-auto-flow: column;
     place-items: center;
-    
-    margin: 15rem 10rem;
 }
 .links img {
-    padding: 5rem;
+    width: 100%;
+    transition: 200ms;
 }
 .links img:hover {
-    border-bottom: 1px solid white;
+    transform: scale(1.25);
 }
 
 footer {
     display: grid;
     place-items: center;
 
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
     font-family: 'Fira Code';
-    font-size: 1.8rem;
 
     margin-bottom: 10rem;
 }

@@ -43,47 +43,60 @@
         </div>
     </nav>
 
-    <div class="introduction">
+
+<!-- HERO (introduction) -->
+    <div class="hero">
+
+        <!-- heading -->
         <h1>Imagine. Explore. Recreate.</h1>
-        <p>A clone of the original website
-        <a target="_blank" href="https://www.instrument.com/"> Instrument</a>.</p>
-        <p>Now the hamburger menu has animations and works</p>
+
+        <!-- summary -->
+        <p>
+            A clone of the original website <!-- summary + original website link -->
+            <a target="_blank" href="https://www.instrument.com/"> Instrument</a>.
+        </p>
+
         <button>Learn more -></button>
 
-        <div class="intro--photo"><img src="images/photographer.jpg"></div>
+        <div class="hero-image"><img src="images/photographer.jpg"></div>
 
-        <div class="intro--phase2">Random photos of setups to fill space</div>
+        <div class="hero-section">Random photos of setups to fill space</div>
     </div>
 
+<!-- MAIN CONTENT AREA (contains images of setups with some text) -->
+    <div class="main-content">
 
-    <div class="content">
-        <div class="content--image"><img src="images/gaming dell.jpg" alt=""></div>
-        <div class="content--text">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nemo necessitatibus, veniam officiis quas est</p>
-            <button>Learn more -></button>
+        <div class="content-box"> <!-- content section 01 -->
+            <section class="content-box-image">
+                <img src="./images/gaming dell.jpg">
+            </section>
+
+            <section class="content-box-text">
+                <p>A gaming setup for all your gaming needs which can also be used as a work station</p>
+            </section>
+        </div>
+
+        <div class="content-box"> <!-- content section 02 -->
+            <section class="content-box-image">
+                <img src="./images/apple gaming.jpg">
+            </section>
+
+            <section class="content-box-text">
+                <p>A fully fledged office setup by apple with accessories that are top notch</p>
+            </section>
+        </div>
+
+        <div class="content-box"> <!-- content section 03 -->
+            <section class="content-box-image">
+                <img src="./images/editor.jpg">
+            </section>
+
+            <section class="content-box-text">
+                <p>An office which is powered with a laptop that is capable of anything</p>
+            </section>
         </div>
     </div>
-    
 
-    <div class="content">
-        <div class="content--text">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nemo necessitatibus, veniam officiis quas est</p>
-            <button>Read more -></button>
-        </div>
-        <div class="content--image"><img src="images/apple gaming.jpg" alt=""></div>
-    </div>
-
-
-    <div class="content">
-        <div class="content--image"><img src="images/editor.jpg" alt=""></div>
-        <div class="content--text">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nemo necessitatibus, veniam officiis quas est</p>
-            <button>What we do -></button>
-        </div>
-    </div>
 
     <div class="intro--phase3">
         <p>Explore a few of our most impactful projects</p>
@@ -93,18 +106,18 @@
     <div class="intro--last">
         <div class="left">
             <div class="left--image"><img src="images/apple small.jpg"></div>
-            <h3>Display Griding</h3>
-            <p>Oh gosh, it took a lot of time to create the side by side content. I'm so happy that I was finally able to find a solution for it BUT I'm tired, really tired.. (It took two whole days of continous messing around)</p>
+            <h3>Grid layout</h3>
+            <p>use of grid system to make this side-by-side layout with additional media queries for better responsiveness</p>
         </div>
 
         <div class="right">
             <div class="right--image"><img src="images/programmer.jpg"></div>
-            <h3>Challenges with Images</h3>
-            <p>Its so messy working with images it is really putting me off, and my code is getting messier and messier the more I put stuff in it. I might not have the energy to make this thing responsive.</p>
+            <h3>CSS gets messier</h3>
+            <p>As the size of the repo was increasing my CSS was getting out of hand very easily, it was a pain to even try to organize stuff (I still tried though). Thinking of using SASS for later projects.</p>
         </div>
     </div>
 
-
+<!-- Icons that link to different social medias -->
     <div class="links">
         <a target="_blank" href="https://www.facebook.com/"><img src="icons/facebook.png"></a>
         <a target="_blank" href="https://www.twitter.com/"><img src="icons/twitter.png"></a>
@@ -113,8 +126,8 @@
 
 
     <footer>
-        <h3>I don't want to do the footer</h3>
-        <button>Good Night -></button>
+        <h3>I don't want to bother with footer</h3>
+        <button>I'm tired -></button>
     </footer>
 </body>
 </html>
